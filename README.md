@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Agentica — The AI Operating System
 
 A premium, standalone marketing website and interactive AI Operating System dashboard. Built with only **HTML5, CSS3, and vanilla JavaScript** — no frameworks, no build step, no external assets.
