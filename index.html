@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agentica — The AI Operating System for Agent Infrastructure</title>
+    <meta
+      name="description"
+      content="Agentica is a spatial AI operating system to build, test, deploy and monitor autonomous agents with calm, precise, premium tooling."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ══════════ AMBIENT BACKGROUND (mesh gradients + blobs + particles) ══════════ -->
+    <div class="ambient" aria-hidden="true">
+      <div class="mesh mesh--a" data-depth="0.018"></div>
+      <div class="mesh mesh--b" data-depth="0.032"></div>
+      <div class="mesh mesh--c" data-depth="0.010"></div>
+      <div class="grain"></div>
+      <canvas class="dust" id="dust"></canvas>
+      <div class="vignette"></div>
+    </div>
+
+    <!-- ══════════ FLOATING GLASS NAVIGATION ══════════ -->
+    <header class="nav" id="nav">
+      <div class="nav__glass glass">
+        <a class="brand" href="#top" aria-label="Agentica home">
+          <span class="brand__mark" aria-hidden="true">
+            <span class="brand__ring"></span>
+            <span class="brand__dot"></span>
+          </span>
+          <span class="brand__word">Agentica</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#system" class="navlink">System</a>
+          <a href="#console" class="navlink">Console</a>
+          <a href="#surfaces" class="navlink">Surfaces</a>
+          <a href="#pricing" class="navlink">Plans</a>
+        </nav>
+
+        <div class="nav__actions">
+          <button class="kbtn" id="openPalette" aria-label="Open command palette">
+            <span class="kbtn__label">Search</span>
+            <kbd>⌘</kbd><kbd>K</kbd>
+          </button>
+          <a class="btn btn--primary btn--sm" href="#console">Enter OS</a>
+          <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ══════════ HERO ══════════ -->
+      <section class="hero" id="hero">
+        <div class="hero__inner">
+          <div class="hero__copy reveal">
+            <span class="eyebrow glass-thin">
+              <span class="pulse-dot"></span> Agent infrastructure · v4 runtime
+            </span>
+            <h1 class="display">
+              The operating system<br />
+              for <em>living</em> software.
+            </h1>
+            <p class="lede">
+              Agentica gives autonomous agents a body: memory, senses, tools and a runtime you can
+              watch think. Build the workflow, observe every token, ship to the edge.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#console">
+                <span>Launch console</span>
+                <svg viewBox="0 0 24 24" class="ico" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <button class="btn btn--ghost" id="heroPalette">
+                Command palette <kbd>⌘</kbd><kbd>K</kbd>
+              </button>
+            </div>
+            <dl class="hero__stats">
+              <div><dt>p50 latency</dt><dd>38<span>ms</span></dd></div>
+              <div><dt>runs / day</dt><dd>9.2<span>M</span></dd></div>
+              <div><dt>uptime</dt><dd>99.99<span>%</span></dd></div>
+            </dl>
+          </div>
+
+          <!-- ── AI CORE: pure CSS/JS dimensional object ── -->
+          <div class="core-stage" id="coreStage" aria-hidden="true">
+            <div class="core-shadow"></div>
+            <div class="core" id="core">
+              <div class="core__halo"></div>
+              <div class="core__glass"></div>
+              <div class="core__refract"></div>
+              <div class="core__specular"></div>
+              <div class="core__inner">
+                <span class="core__blade"></span>
+                <span class="core__blade"></span>
+                <span class="core__blade"></span>
+                <span class="core__blade"></span>
+              </div>
+              <div class="core__nucleus"></div>
+              <div class="orbit orbit--1">
+                <span class="mod" data-label="memory"></span>
+                <span class="mod" data-label="tools"></span>
+              </div>
+              <div class="orbit orbit--2">
+                <span class="mod" data-label="voice"></span>
+                <span class="mod" data-label="vision"></span>
+                <span class="mod" data-label="api"></span>
+              </div>
+              <div class="orbit orbit--3">
+                <span class="mod mod--sm"></span>
+                <span class="mod mod--sm"></span>
+                <span class="mod mod--sm"></span>
+                <span class="mod mod--sm"></span>
+              </div>
+            </div>
+            <div class="core-caption glass-thin">
+              <span class="pulse-dot pulse-dot--amber"></span> runtime · reasoning
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span>scroll to enter</span>
+          <div class="scroll-hint__rail"><i></i></div>
+        </div>
+      </section>
+
+      <!-- ══════════ SYSTEM / BENTO ══════════ -->
+      <section class="section" id="system">
+        <div class="section__head reveal">
+          <h2 class="h2">A material system, not a template.</h2>
+          <p class="sub">
+            Every surface is a real material with depth, refraction and weight — so hierarchy is
+            felt before it is read.
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="cell cell--wide glass tilt reveal">
+            <header class="cell__head">
+              <h3>Runtime graph</h3>
+              <span class="tag">live</span>
+            </header>
+            <div class="graph">
+              <svg viewBox="0 0 480 150" class="graph__svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="edge" x1="0" x2="1">
+                    <stop offset="0" stop-color="rgba(120,190,255,.15)" />
+                    <stop offset="1" stop-color="rgba(150,255,225,.75)" />
+                  </linearGradient>
+                </defs>
+                <path class="edge" d="M60 75 C130 75 130 30 200 30" stroke="url(#edge)" />
+                <path class="edge" d="M60 75 C130 75 130 120 200 120" stroke="url(#edge)" />
+                <path class="edge" d="M200 30 C280 30 280 75 340 75" stroke="url(#edge)" />
+                <path class="edge" d="M200 120 C280 120 280 75 340 75" stroke="url(#edge)" />
+                <path class="edge" d="M340 75 H420" stroke="url(#edge)" />
+              </svg>
+              <span class="node" style="--x: 12%; --y: 50%">trigger</span>
+              <span class="node" style="--x: 42%; --y: 20%">reason</span>
+              <span class="node" style="--x: 42%; --y: 80%">retrieve</span>
+              <span class="node" style="--x: 71%; --y: 50%">act</span>
+              <span class="node node--out" style="--x: 88%; --y: 50%">ship</span>
+            </div>
+          </article>
+
+          <article class="cell glass tilt reveal">
+            <h3>Persistent memory</h3>
+            <p>Vector, episodic and structured recall unified behind one addressable namespace.</p>
+            <div class="bars">
+              <i style="--h: 34%"></i><i style="--h: 62%"></i><i style="--h: 48%"></i>
+              <i style="--h: 88%"></i><i style="--h: 56%"></i><i style="--h: 74%"></i>
+            </div>
+          </article>
+
+          <article class="cell glass tilt reveal">
+            <h3>Senses</h3>
+            <p>Voice, vision and files stream into the same context window.</p>
+            <ul class="chips">
+              <li>voice</li>
+              <li>vision</li>
+              <li>ocr</li>
+              <li>files</li>
+            </ul>
+          </article>
+
+          <article class="cell cell--tall glass tilt reveal">
+            <h3>Observability</h3>
+            <p>Every thought is a record. Replay any run, token by token.</p>
+            <div class="spark" id="spark"></div>
+            <div class="kv"><span>traced spans</span><b>1,482,904</b></div>
+            <div class="kv"><span>replay window</span><b>90 days</b></div>
+          </article>
+
+          <article class="cell glass tilt reveal">
+            <h3>Edge deploys</h3>
+            <p>Ship a graph to 34 regions in under a second.</p>
+            <div class="globe" aria-hidden="true"><i></i><i></i><i></i></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ══════════ DASHBOARD / CONSOLE ══════════ -->
+      <section class="section section--console" id="console">
+        <div class="section__head reveal">
+          <h2 class="h2">The console.</h2>
+          <p class="sub">A full operating surface — chat, senses, logs, tests and telemetry.</p>
+        </div>
+
+        <div class="os glass reveal" id="os">
+          <div class="os__chrome">
+            <div class="os__dots"><i></i><i></i><i></i></div>
+            <div class="os__path">agentica / workspace / atlas-agent</div>
+            <div class="os__chrome-right">
+              <span class="tag tag--ok"><span class="pulse-dot"></span> healthy</span>
+              <button class="iconbtn" id="osPalette" aria-label="Open command palette">⌘K</button>
+            </div>
+          </div>
+
+          <div class="os__body">
+            <!-- Sidebar -->
+            <aside class="os__side" aria-label="Console sections">
+              <div class="side__group">
+                <span class="side__title">Interfaces</span>
+                <button class="side__item is-active" data-panel="chat">Chat</button>
+                <button class="side__item" data-panel="voice">Voice</button>
+                <button class="side__item" data-panel="vision">Vision</button>
+                <button class="side__item" data-panel="files">Files</button>
+              </div>
+              <div class="side__group">
+                <span class="side__title">Runtime</span>
+                <button class="side__item" data-panel="memory">Memory</button>
+                <button class="side__item" data-panel="logs">Execution logs</button>
+                <button class="side__item" data-panel="timeline">Workflow timeline</button>
+              </div>
+              <div class="side__group">
+                <span class="side__title">Integrations</span>
+                <button class="side__item" data-panel="api">API testing</button>
+                <button class="side__item" data-panel="webhooks">Webhooks</button>
+                <button class="side__item" data-panel="analytics">Analytics</button>
+                <button class="side__item" data-panel="settings">Settings</button>
+              </div>
+            </aside>
+
+            <!-- Panels -->
+            <div class="os__main">
+              <!-- CHAT -->
+              <section class="panel is-active" data-panel="chat" aria-label="Chat">
+                <div class="panel__head">
+                  <h3>Atlas agent</h3>
+                  <div class="seg" role="tablist">
+                    <button class="seg__i is-on">Reasoning</button>
+                    <button class="seg__i">Fast</button>
+                  </div>
+                </div>
+                <div class="thread" id="thread">
+                  <div class="msg msg--user"><p>Audit last night's failed invoice runs.</p></div>
+                  <div class="msg msg--ai">
+                    <p>
+                      Three runs failed on <code>stripe.invoice.sync</code> — all timed out at the
+                      retry ceiling. I re-queued them with a widened backoff.
+                    </p>
+                  </div>
+                </div>
+                <div class="composer">
+                  <input
+                    id="chatInput"
+                    class="composer__input"
+                    placeholder="Ask Atlas to run, inspect or fix something…"
+                    aria-label="Message the agent"
+                  />
+                  <button class="btn btn--primary btn--sm" id="chatSend">Send</button>
+                </div>
+                <div class="statusline" id="chatStatus"><span>idle</span></div>
+              </section>
+
+              <!-- VOICE -->
+              <section class="panel" data-panel="voice" aria-label="Voice">
+                <div class="panel__head"><h3>Voice interface</h3><span class="tag">duplex</span></div>
+                <div class="voice">
+                  <button class="voice__orb" id="voiceOrb" aria-pressed="false">
+                    <span class="voice__ring"></span><span class="voice__core"></span>
+                  </button>
+                  <div class="wave" id="wave" aria-hidden="true"></div>
+                  <p class="voice__hint" id="voiceHint">Tap to open a live audio session.</p>
+                </div>
+              </section>
+
+              <!-- VISION -->
+              <section class="panel" data-panel="vision" aria-label="Vision">
+                <div class="panel__head"><h3>Vision</h3><span class="tag">4 regions</span></div>
+                <div class="vision">
+                  <div class="vision__frame">
+                    <span class="bbox" style="--x: 12%; --y: 18%; --w: 34%; --h: 40%">invoice</span>
+                    <span class="bbox" style="--x: 56%; --y: 30%; --w: 30%; --h: 26%">total</span>
+                    <span class="bbox" style="--x: 20%; --y: 66%; --w: 46%; --h: 22%">signature</span>
+                    <span class="scanline"></span>
+                  </div>
+                  <ul class="vision__list">
+                    <li><b>invoice</b><span>0.98</span></li>
+                    <li><b>total</b><span>0.94</span></li>
+                    <li><b>signature</b><span>0.89</span></li>
+                    <li><b>date</b><span>0.83</span></li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- FILES -->
+              <section class="panel" data-panel="files" aria-label="Files">
+                <div class="panel__head"><h3>Files</h3><span class="tag">context store</span></div>
+                <div class="drop" id="drop" tabindex="0" role="button" aria-label="Upload files">
+                  <div class="drop__icon" aria-hidden="true"></div>
+                  <p>Drop files to embed into the agent's context</p>
+                  <span>pdf · md · csv · png · wav</span>
+                </div>
+                <ul class="filelist" id="filelist">
+                  <li><b>q3-contracts.pdf</b><i>embedded</i><span>2.4 MB</span></li>
+                  <li><b>ledger-2026.csv</b><i>embedded</i><span>810 KB</span></li>
+                </ul>
+              </section>
+
+              <!-- MEMORY -->
+              <section class="panel" data-panel="memory" aria-label="Memory">
+                <div class="panel__head"><h3>Memory viewer</h3><span class="tag">12,904 vectors</span></div>
+                <div class="memgrid" id="memgrid"></div>
+                <div class="memmeta">
+                  <div class="kv"><span>namespace</span><b>atlas/finance</b></div>
+                  <div class="kv"><span>recall hit rate</span><b>91.4%</b></div>
+                </div>
+              </section>
+
+              <!-- LOGS -->
+              <section class="panel" data-panel="logs" aria-label="Execution logs">
+                <div class="panel__head">
+                  <h3>Execution logs</h3>
+                  <button class="btn btn--ghost btn--sm" id="runFlow">Run workflow</button>
+                </div>
+                <div class="logs" id="logs"></div>
+                <div class="json">
+                  <div class="json__head">
+                    <span>span payload</span>
+                    <button class="iconbtn" id="jsonToggle" aria-expanded="true">collapse</button>
+                  </div>
+                  <pre class="json__body" id="jsonBody"></pre>
+                </div>
+              </section>
+
+              <!-- TIMELINE -->
+              <section class="panel" data-panel="timeline" aria-label="Workflow timeline">
+                <div class="panel__head"><h3>Workflow timeline</h3><span class="tag">run #48812</span></div>
+                <ol class="timeline" id="timeline"></ol>
+              </section>
+
+              <!-- API -->
+              <section class="panel" data-panel="api" aria-label="API testing">
+                <div class="panel__head"><h3>API tester</h3><span class="tag">sandbox</span></div>
+                <form class="req" id="apiForm">
+                  <select class="field field--sm" id="apiMethod" aria-label="Method">
+                    <option>POST</option><option>GET</option><option>PATCH</option>
+                  </select>
+                  <input class="field" id="apiUrl" value="/v4/agents/atlas/invoke" aria-label="Endpoint" />
+                  <button class="btn btn--primary btn--sm" type="submit">Send</button>
+                </form>
+                <pre class="json__body" id="apiOut">// response will appear here</pre>
+              </section>
+
+              <!-- WEBHOOKS -->
+              <section class="panel" data-panel="webhooks" aria-label="Webhooks">
+                <div class="panel__head"><h3>Webhooks</h3><button class="btn btn--ghost btn--sm" id="fireHook">Fire test event</button></div>
+                <ul class="hooks" id="hooks">
+                  <li><b>run.completed</b><i>https://hooks.agentica.dev/…/9f2</i><span class="tag tag--ok">200</span></li>
+                  <li><b>run.failed</b><i>https://hooks.agentica.dev/…/c41</i><span class="tag tag--ok">200</span></li>
+                </ul>
+              </section>
+
+              <!-- ANALYTICS -->
+              <section class="panel" data-panel="analytics" aria-label="Analytics">
+                <div class="panel__head"><h3>Analytics</h3><span class="tag">last 24h</span></div>
+                <div class="metrics">
+                  <div class="metric"><span>Runs</span><b data-count="24810">0</b><i class="up">+12.4%</i></div>
+                  <div class="metric"><span>Success</span><b data-count="99">0</b><i class="up">+0.3%</i></div>
+                  <div class="metric"><span>Tokens</span><b data-count="8420000">0</b><i>steady</i></div>
+                  <div class="metric"><span>Cost</span><b data-count="1284">0</b><i class="down">−6.1%</i></div>
+                </div>
+                <div class="chart" id="chart" aria-hidden="true"></div>
+              </section>
+
+              <!-- SETTINGS -->
+              <section class="panel" data-panel="settings" aria-label="Settings">
+                <div class="panel__head"><h3>Settings</h3><span class="tag">workspace</span></div>
+                <ul class="settings">
+                  <li><div><b>Autonomous execution</b><span>Let Atlas act without confirmation.</span></div><button class="switch is-on" role="switch" aria-checked="true"><i></i></button></li>
+                  <li><div><b>Reduced motion</b><span>Respect the OS animation preference.</span></div><button class="switch is-on" role="switch" aria-checked="true"><i></i></button></li>
+                  <li><div><b>Trace retention</b><span>Store spans for 90 days.</span></div><button class="switch" role="switch" aria-checked="false"><i></i></button></li>
+                </ul>
+              </section>
+            </div>
+
+            <!-- Right rail -->
+            <aside class="os__rail" aria-label="Status">
+              <div class="rail__card glass-thin">
+                <span class="rail__t">Runtime</span>
+                <div class="ring" style="--p: 0.72"><b>72%</b></div>
+                <div class="kv"><span>region</span><b>fra-1</b></div>
+              </div>
+              <div class="rail__card glass-thin">
+                <span class="rail__t">Recent activity</span>
+                <ul class="activity" id="activity"></ul>
+              </div>
+              <div class="rail__card glass-thin">
+                <span class="rail__t">Agents</span>
+                <ul class="agents">
+                  <li><b>Atlas</b><span class="tag tag--ok">running</span></li>
+                  <li><b>Ledger</b><span class="tag">idle</span></li>
+                  <li><b>Scout</b><span class="tag tag--warn">retrying</span></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ SURFACES ══════════ -->
+      <section class="section" id="surfaces">
+        <div class="section__head reveal">
+          <h2 class="h2">Depth you can feel.</h2>
+          <p class="sub">Layered glass responds to light, cursor and scroll — quietly.</p>
+        </div>
+        <div class="stack reveal" id="stack">
+          <div class="stack__layer" data-depth="0.05"><span>presentation</span></div>
+          <div class="stack__layer" data-depth="0.09"><span>runtime</span></div>
+          <div class="stack__layer" data-depth="0.14"><span>memory</span></div>
+          <div class="stack__layer" data-depth="0.2"><span>infrastructure</span></div>
+        </div>
+      </section>
+
+      <!-- ══════════ PRICING ══════════ -->
+      <section class="section" id="pricing">
+        <div class="section__head reveal">
+          <h2 class="h2">Plans</h2>
+          <p class="sub">Start on the free runtime. Scale when the agents earn it.</p>
+        </div>
+        <div class="plans">
+          <article class="plan glass tilt reveal">
+            <h3>Studio</h3><p class="price">$0</p>
+            <ul><li>1 agent</li><li>10k runs / mo</li><li>7-day traces</li></ul>
+            <button class="btn btn--ghost">Start free</button>
+          </article>
+          <article class="plan plan--hi glass tilt reveal">
+            <span class="plan__badge">most chosen</span>
+            <h3>Runtime</h3><p class="price">$48<span>/mo</span></p>
+            <ul><li>Unlimited agents</li><li>2M runs / mo</li><li>90-day replay</li><li>Edge deploys</li></ul>
+            <button class="btn btn--primary">Choose Runtime</button>
+          </article>
+          <article class="plan glass tilt reveal">
+            <h3>Infrastructure</h3><p class="price">Custom</p>
+            <ul><li>Private regions</li><li>SOC2 · HIPAA</li><li>Dedicated runtime</li></ul>
+            <button class="btn btn--ghost">Talk to us</button>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__glass glass-thin">
+          <div class="footer__brand">
+            <span class="brand__mark" aria-hidden="true"><span class="brand__ring"></span><span class="brand__dot"></span></span>
+            Agentica
+          </div>
+          <p>The operating system for living software.</p>
+          <nav aria-label="Footer">
+            <a href="#system">System</a><a href="#console">Console</a>
+            <a href="#surfaces">Surfaces</a><a href="#pricing">Plans</a>
+          </nav>
+          <small>© 2026 Agentica Labs</small>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ══════════ COMMAND PALETTE ══════════ -->
+    <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command palette" hidden>
+      <div class="palette__scrim" data-close></div>
+      <div class="palette__box glass">
+        <input class="palette__input" id="paletteInput" placeholder="Type a command or search…" aria-label="Command" />
+        <ul class="palette__list" id="paletteList"></ul>
+        <div class="palette__foot"><kbd>↑</kbd><kbd>↓</kbd> navigate <kbd>↵</kbd> run <kbd>esc</kbd> close</div>
+      </div>
+    </div>
+
+    <div class="cursor-light" id="cursorLight" aria-hidden="true"></div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
