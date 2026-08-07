@@ -67,12 +67,12 @@ python3 -m http.server 8080
 
 - **Zero dependencies** — every icon is inline SVG, every animation is CSS/JS, every gradient is hand-coded.
 - **Performance-first** — one shared `requestAnimationFrame` loop drives all continuous motion.
-- **Accessibility** — semantic HTML, ARIA labels, keyboard-navigable palette, reduced-motion support.
+- **Accessibility** — semantic HTML, ARIA labels, keyboard-navigable palette, reduced-motion supports.
 
 ---
 
 ## License
-
+ 
 This is a demonstration / portfolio piece. You are free to adapt and reuse it for your own projects.
 =======
 # AGENTICA
